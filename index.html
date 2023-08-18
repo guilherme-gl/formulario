@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Carro</title>
+    <style>
+        /* Estilos gerais */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .header {
+            background-color:#a5a5a5;
+            color: #000000;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: #ffffff;
+            margin-top: auto;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #ffffff;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="number"] {
+            width: 100%;
+            padding-left: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="submit"] {
+            background: #f36f25;
+            color: #ffffff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background: #d65b1c;
+        }
+
+        /* Estilos de responsividade para dispositivos móveis */
+        @media (max-width: 768px) {
+            .header {
+                padding: 10px;
+            }
+
+            form {
+                padding: 10px;
+            }
+
+            input[type="text"],
+            input[type="number"] {
+                margin-bottom: 10px;
+            }
+
+            input[type="submit"] {
+                padding: 8px 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Formulário de Carro</h1>
+        <p>Preencha os detalhes do carro abaixo</p>
+    </div>
+    
+    <form>
+        <label for="buscaCarro">Buscar Carro:</label>
+        <input type="text" id="buscaCarro" name="buscaCarro" placeholder="Digite o nome do carro">
+        
+        <label for="anoCarro">Ano do Carro:</label>
+        <input type="number" id="anoCarro" name="anoCarro" min="1900" max="2099" required>
+        
+        <label for="cvCarro">Cavalos de Potência (cv):</label>
+        <input type="number" id="cvCarro" name="cvCarro" min="1" required>
+        
+        <input type="submit" value="Enviar">
+    </form>
+
+    <div class="footer">
+        <p>&copy; 2023 Nome da Sua Empresa. Todos os direitos reservados.</p>
+    </div>
+
+    <div class="fipe-link">
+        <p>Quer consultar a Tabela Fipe para o seu carro? <a href="https://www.webmotors.com.br/tabela-fipe/" target="_blank">Clique aqui</a>.</p>
+    </div>
+</body>
+</html>
